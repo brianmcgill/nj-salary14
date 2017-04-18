@@ -150,16 +150,15 @@ a:hover, footer a:hover {  color: #ED1C24; }
 .clock { 
   position: relative; 
   float: left;
-  margin: 2px 5px 0 0 ; 
+  margin: -2px 5px 0 0 ; 
 }
 
 .art-container {
   position: relative;
-  max-width: 1120px; /*can be adjusted down to 740px */
+  max-width: 740px; /*can be adjusted down to 740px */
   margin: 10px auto;
   padding: 0 5px;
-  background-color: #eee; /*remove*/
-  height: 300px; /*remove*/
+  height: 800px; /*remove*/
 }
 
 .note {
@@ -236,6 +235,13 @@ a:hover, footer a:hover {  color: #ED1C24; }
 
 
 /*YOUR CSS*/
+
+  .iframez {
+    width: 100%;
+    height: 100%;
+    border:0 none;
+    overflow: hidden;
+  }
 
 .tooltip {
 	position: absolute;

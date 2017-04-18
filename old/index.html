@@ -1,0 +1,115 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+   <title>Salary NJ</title>
+
+   <!--[if lt IE 7]>
+            Below is a photo of an interactive that can be seen in other browsers such as Firefox, Google Chrome and Internet Explorer v7 and above. Please download one of those browsers to view the full interactive.
+            <img src="http://assets.nationaljournal.com/gfx/salary2014/ie7alt.jpg" >
+        <![endif]-->
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+
+</head>
+<body>
+
+  <div id="container">
+    <svg style="width: 400px; height: 50px; margin-left: 210px;">  
+        <g id="legend">      
+            <text transform="matrix(1 0 0 1 32 21)" font-size="14">Men</text>
+            <circle fill="#00aeef" cx="24" cy="16" r="3.5"/>
+            <text transform="matrix(1 0 0 1 32 40)" font-size="14">Women</text>
+            <circle fill="#ffc20e" cx="24" cy="35" r="3.5"/>
+
+            <circle fill="white" stroke="#888" stroke-width="1.25" cx="124" cy="24" r="22"/>
+            <text transform="matrix(1 0 0 1 112 28)" font-size="12">$5M</text>
+            <circle fill="white" stroke="#888" stroke-width="1.25" cx="168" cy="24" r="10.5"/>
+            <text transform="matrix(1 0 0 1 182 28)" font-size="12">$1M</text>
+            <circle fill="white" stroke="#888" stroke-width="1.25" cx="224" cy="24" r="7.3"/>
+            <text transform="matrix(1 0 0 1 234 28)" font-size="12">$500K</text>
+        </g></svg>
+
+
+      <div id="view_selection" class="btn-group" style="margin-left:170px">
+        <a href="#" id="all" class="btn active">All Salaries</a>
+        <a href="#" id="sector" class="btn">By Sector</a>
+        <a href="#" id="gender" class="btn">By Gender</a>
+        <a href="#" id="comp" class="btn">By Compensation</a>
+      </div>
+      
+      <div id="textAll" class="text">
+        <span class="text" style="top: 60px; left: 40px; text-align:left; width: 210px;">The <b>560</b> executives surveyed who were paid for a full year's worth make a combined <b></br> $413 million</b>. The median </br>salary of these executives? <b> $452,862</b>.  </span>
+      </div>
+
+      <div id="textSector" class="text">
+        <span class="text hed" style="top: 50px; left:0px">Think Tanks (20)<p class="text number">2.2%</p></span>
+        <span class="text" style="top: 105px; left:0px;">Median salary: </br><b> $403,880</b></span>
+        <span class="text hed" style="top: 390px; left:400px">Trade Assoc. (205)<p class="text number">59.3%</p></span>
+        <span class="text" style="top: 445px; left:400px;">Median salary: <b> $678,696</b></span>
+        <span class="text hed" style="top: 650px; left:510px">Unions (37)<p class="text number">3.5%</p></span>
+        <span class="text" style="top: 705px; left:510px;">Median salary: <b> $296,311</b></span>
+        <span class="text hed" style="top: 600px; left:60px">Professional </br> Assoc. (164)<p class="text number">20.9%</p></span>
+        <span class="text" style="top: 675px; left:60px;">Median salary: <b> $437,194</b></span>
+        <span class="text hed" style="top: 230px; left:100px">Public-Interest </br>Groups (134)<p class="text number">14.0%</p></span>
+        <span class="text" style="top: 305px; left:100px;">Median salary: </br><b> $332,744</b></span>
+      </div>
+
+      <div id="textGender" class="text">
+        <span class="text hed" style="top: 40px; left:120px; width: 200px;">Men (439)<p class="text number">85.0%</p></span>
+        <span class="text hed" style="top: 150px; left:505px; width: 200px;">Women (121)<p class="text number">15.0%</p></span>
+        <span class="text" style="top: 95px; left:120px; width: 200px;">Median salary: <b> $462,920</b></span>
+        <span class="text" style="top: 205px; left:505px; width: 200px;">Median salary: <b> $403,857</b></span>
+      </div>
+
+      <div id="textComp" class="text">
+        <span class="text hed" style="top: 30px; left:60px">Top quarter of earners<p class="text number">60.3%</p></span>
+        <span class="text" style="top: 90px; left:40px; width:260px;">or about <b> $85.7 million more </b> than the bottom three quarters combined.</br>Median salary: <b> $1.21 million</b></span>
+        <span class="text hed" style="top: 60px; left:550px">Upper-middle </br> quarter<p class="text number">19.2%</p></span>
+        <span class="text" style="top: 140px; left:550px;">Median salary: </br><b> $551,707</b></span>
+        <span class="text hed" style="top: 320px; left:570px">Lower-middle </br> quarter<p class="text number">12.5%</p></span>
+        <span class="text" style="top: 400px; left:570px;">Median salary: </br><b> $362,248</b></span>
+        <span class="text hed" style="top: 530px; left:550px">Bottom quarter </br> of earners<p class="text number">8.0%</p></span>
+        <span class="text" style="top: 610px; left:550px;">or about $11 million less </br>than <b>Roger Goodell</b>.</br>Median salary: <b> $249,710</b></span>
+      </div>
+
+ 
+      <div id="chartOne"></div>
+
+  </div>
+
+
+
+ 
+
+  <script src="js/commas.js"> </script> 
+  <script src="js/CustomTooltip.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="salary.js"></script>
+
+  
+  <script type="text/javascript"> 
+
+      d3.csv("salary_2014.csv", function(data) {
+
+        salaryChart.init(data);
+        salaryChart.toggle_view('all');
+      });
+ 
+    $(document).ready(function() {
+      $('#view_selection a').click(function() {
+        var view_type = $(this).attr('id');
+        $('#view_selection a').removeClass('active');
+        $(this).toggleClass('active');
+        salaryChart.toggle_view(view_type);
+        return false;
+      });
+    });
+  </script>
+  
+</body>
+</html>
