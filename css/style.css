@@ -16,11 +16,15 @@
 .flag {
   position: relative;
   height: 30px;
-  margin: 5px auto;
+  margin: 0 auto;
   padding: 0 5px;
   max-width: 750px;
 
 }
+
+.nj-logo {position: relative; float: left;
+}
+.nj-logo img { height: 30px; }
 
 .socialBox {
   position: relative;
@@ -30,6 +34,9 @@
   width: 20px;
   height: 20px;
 }
+
+.socialBox img {width: 20px;}
+
 
 .content-wrapper {
   position: relative;
@@ -74,11 +81,22 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 100;
   line-height: 1.2;
   margin-top: 20px;
   text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600; 
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 300; 
+  font-style: italic;
 }
 
 p {
@@ -182,7 +200,7 @@ a:hover, footer a:hover {  color: #ED1C24; }
 
 .col-md-2-4 , .col-xs-6{
     float: left ; 
-    max-width: 210px;
+    max-width: 220px;
     margin-right: 12px;
   }
 
