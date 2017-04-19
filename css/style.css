@@ -184,7 +184,7 @@ a:hover, footer a:hover {  color: #ED1C24; }
   margin-top: 20px;
 }
 
-.footer a { color: #c2c2c2; font-weight: lighter;}
+.footer a { color: #eee; font-weight: lighter;}
 
 .footer ul {
   border-left: 1px solid #c2c2c2;
@@ -216,7 +216,7 @@ a:hover, footer a:hover {  color: #ED1C24; }
   h1 { font-size: 35px; }
   .article-body p { font-size: 15px; }
   .author { font-size: 20px; }
-  .pub-date { font-size: 15px; }
+  h3, h4, .pub-date { font-size: 15px; }
 
   .content-wrapper { margin-top: 35px; }
   .topper { height: 30px; }
